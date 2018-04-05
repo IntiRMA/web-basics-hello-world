@@ -2,13 +2,17 @@
  * We are using jQuery functions as they are pretty easy to use.
  * You can do all of this stuff using vanilla javascript though
  */
+ function clicked(){
+   fetchRandomTriviaQuestion(displayQuestionAndAnswer("rgrg", "grgrg"));
+   $("#results-area").text("Oh hi!");
+ }
 
 // $(...) will run the function you give it when the page is loaded & ready
 $(function() {
   // console.log will log a message or object to the browser developer console
   console.log("page loaded...");
 
-  $("selector-goes-here").click(/* function for when the button is clicked goes here */);
+  $("button").click(clicked);
   /*
    * TODO: You will need to use a css selector to get jQuery to find the button element in the page
    * Then you will need to make a new javascript function to do stuff for when the button
